@@ -1,0 +1,125 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #001F3F;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: #001F3F;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container{
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+
+.aboutme{
+    background-color: #001F3F;
+    min-height: 300px;
+    color: #EAD8B1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.aboutme-1 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #EAD8B1;
+    text-shadow: 5px 5px 5px black;
+}
+
+.aboutme-2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color:#EAD8B1;
+    text-shadow: 5px 5px 5px black;
+}
+
+.aboutme-3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-shadow: 5px 5px 5px black;
+}
+
+.aboutme-text{
+    display: flex;
+    text-align: center;
+}
+
+.aboutme-text p {
+    color: #EAD8B1;
+    justify-content: flex-start;
+    font-weight: 400;
+}
+
+.aboutme-image{
+    display: flex;
+}
+
+.profile-image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+.spotify-embed{
+    display: flex;
+    width: 400px;
+    height: auto;
+}
+
+#section2{
+    columns: 200px 2;
+}
+
+.card {
+    display: flex;
+    width: 192px;
+    height: 256px;
+    padding-bottom: 228px;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 8px;
+    background: white;
+}
