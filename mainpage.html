@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portofolio</title>
     <link rel="stylesheet" href="mainpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <img src="" alt="Logo" class="logo">
-        </div>
-        <div class="nav-list">
-            <a href="#section1">About Me</a>
-            <a href="#section2">Portofolio</a>
-            <a href="#section3">Music Playlist</a>
-            <a href="#section4">My Campus</a>
-            <a href="#section5"></a>
-        </div>
+    <!-- Navbar -->
+    <nav class="Navbar">
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="">
+            <h2>Vanilla HTML + CSS</h2>
+        </a>
+        
+        <ul>
+            <li><a href="#section1">About Me</a></li>
+            <li><a href="#section2">Portofolio</a></li>
+            <li><a href="#section3">My favorite Music</a></li>
+            <li><a href="#section4">My Campus</a></li>
+            <li><a href="#section5">Contact Us</a></li>
+        </ul>
     </nav>
 
     <!-- Content -->
@@ -61,12 +63,19 @@
     
             <!-- Section 4 -->
             <section id="section4">
-                hi3
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15842.748337146882!2d107.7691052!3d-6.9279561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c4a6175d148b%3A0xcf3db690ca7ca9dd!2sInstitut%20Teknologi%20Bandung%2C%20Kampus%20Jatinangor!5e0!3m2!1sid!2sid!4v1727117724073!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
     
             <!-- Section 5 -->
             <section id="section5">
-                hi5
+                <div class="feedback-card">
+                    <div class="feedback-header">SEND FEEDBACK</div>
+                    <form class="feedback-body">
+                        <input class="feedback-body__email" placeholder="Email" type="email">
+                        <textarea class="feedback-body__message" placeholder="Message" type="text"></textarea>
+                        <button class="feedback-body__submit">SEND</button>
+                    </form>
+                </div>
             </section>
         </div>
     </div>

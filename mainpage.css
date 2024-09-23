@@ -1,42 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Main CSS ------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-text-color: #c28400;
+    --secondary-text-color: #000000;
+    --padding-inline-section: 20px;
+    --main-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-text-color: #ffffff;
+        --secondary-text-color: #EAD8B1;
+        --main-color: #1E1E1E;
+    }
+}
 
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background-color: #001F3F;
+    background-color: var(--main-color);
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden;
+    color: var(--secondary-text-color);
 }
 
-.navbar{
-    background-color: #001F3F;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    margin-bottom: 50px;
-    justify-content: space-between;
-    z-index: 100;
+h1 {
+    font-size: 3rem;
 }
 
-.nav-list{
-    display: flex;
-    flex-direction: row;
+h2 {
+    font-size: 2rem;
 }
 
-.navbar a{
-    color: white;
+h3 {
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a{
     text-decoration: none;
-    margin: 0 10px;
+    display: inline-block;
+}
+
+a:visited{
+    color: var(--secondary-text-color);
 }
 
 .container{
     flex-direction: column;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
     width: 100vw;
     height: 100vh;
 }
@@ -44,53 +74,84 @@ body{
 section{
     width: 100%;
     height: 100%;
-    background-color: antiquewhite;
     border: 1px solid black;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar ------------------------ */
+
+.Navbar{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--secondary-text-color);
+}
+
+nav{
+    padding: 36px 8%;
+   
+}
+main{
+    height:100vh;
+    width: 70%;
+    margin:0 auto;
+    background-color: var(--main-color);
+    border-radius: 24px;
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h2{
+    margin-left: 8px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+nav ul{
+    z-index: 99;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    color:var(--main-color);
+    margin-right: 24px;
+    
+}
+
+/* About me ------------------------ */
+
 .aboutme{
-    background-color: #001F3F;
     min-height: 300px;
-    color: #EAD8B1;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
 }
 
-.aboutme-1 {
-    font-weight: 700;
-    font-size: 4rem;
-    color: #EAD8B1;
-    text-shadow: 5px 5px 5px black;
-}
-
-.aboutme-2 {
-    font-weight: 600;
-    font-size: 2rem;
-    color:#EAD8B1;
-    text-shadow: 5px 5px 5px black;
-}
-
-.aboutme-3 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-shadow: 5px 5px 5px black;
-}
-
 .aboutme-text{
     display: flex;
     text-align: center;
-}
-
-.aboutme-text p {
-    color: #EAD8B1;
-    justify-content: flex-start;
-    font-weight: 400;
-}
-
-.aboutme-image{
-    display: flex;
 }
 
 .profile-image{
@@ -99,8 +160,19 @@ section{
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
-
 }
+
+/* Portofolio ------------------------ */
+
+#section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Favorite Music ------------------------ */
 
 .spotify-embed{
     display: flex;
@@ -108,18 +180,83 @@ section{
     height: auto;
 }
 
-#section2{
-    columns: 200px 2;
+#section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.card {
-    display: flex;
-    width: 192px;
-    height: 256px;
-    padding-bottom: 228px;
-    flex-direction: column;
-    align-items: center;
+/* Contact ------------------------ */
 
-    border-radius: 8px;
-    background: white;
+#section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+/* Contact ------------------------ */
+
+#section5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#section5 input, button, textarea {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image:none;
+    background-color: #dadad3;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    min-height: 50px;
+    resize:vertical;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.feedback-card {
+    max-width: 980px;
+    margin: 0 auto;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}
+
+.feedback-header {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.feedback-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-body__message {
+    margin-top: 10px;
+}
+
+.feedback-body button {
+    margin-top: 10px;
+    align-self: flex-end;
 }
