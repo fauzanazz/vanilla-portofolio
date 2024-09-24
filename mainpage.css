@@ -1,274 +1,231 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-/* Main CSS ------------------------ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-:root {
-    --primary-text-color: #c28400;
-    --secondary-text-color: #000000;
-    --padding-inline-section: 20px;
-    --main-color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-text-color: #ffffff;
-        --secondary-text-color: #EAD8B1;
-        --main-color: #1E1E1E;
-    }
-}
-
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background-color: var(--main-color);
+    background-color: #CBCBCB;
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    overflow-x: hidden;
-    color: var(--secondary-text-color);
 }
 
-h1 {
-    font-size: 3rem;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
 
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-p{
-    font-size: 1.25rem;
-    color: var(--secondary-text-color);
-    line-height: 1.8rem;
-}
-
-a{
-    text-decoration: none;
-    display: inline-block;
-}
-
-.container{
-    flex-direction: column;
-    margin-inline: auto;
-    padding-inline: var(--padding-inline-section);
-    width: 100vw;
-    height: 100vh;
-}
-
-section{
+.bgimage{
+    background-image: url('images/Background.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100vh;
-    border: 1px solid black;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main{
+    width: min(1400px, 100vw);
+    margin: auto;
+    padding: 20px;
 }
 
-/* Navbar ------------------------ */
-
-.Navbar{
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--main-color);
-    color: var(--secondary-text-color);
-}
-
-nav{
-    padding: 36px 8%;
-   
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-}
-
-.logo h2{
-    margin-left: 8px;
-}
-
-nav{
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+nav{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(0, 0, 0, 0.2)
+    );
+    border-radius: 10px;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    top: 30px;
+    padding: 20px;
+    margin-top: 10px;
+    z-index: 1000;
 }
 
 nav ul{
-    z-index: 99;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
     text-decoration: none;
     font-weight: 500;
-    color:var(--secondary-text-color);
-    margin-right: 24px;
+    font-size: 1.2rem;
 }
 
-/* About me ------------------------ */
-
-.aboutme{
-    min-height: 300px;
+.banner{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    margin-top: 50px;
 }
 
-.aboutme-text{
-    display: flex;
-    text-align: center;
+.banner .content{
+    width: 50%;
 }
 
-.profile-image{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 50%;
+.banner .content h1{
+    font-size: 10rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px #000;
+    line-height: 1em;
+    margin-bottom: 20px;
 }
 
-/* Portofolio ------------------------ */
+.banner .content h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: 0 0 5px #000;
+}
 
-#section2 {
+.grid figure img{
+    width: 100%;
+}
+
+.grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(var(--row), 100px);
+    margin-top: 50px;
+    gap: 50px;
 }
 
-.card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    height: auto;
+.grid-3{
+    --row: 6;
+    font-size: 10em;
+}
+.grid-3 div{
+    grid-column: 2/ 6;
+    text-wrap: nowrap;
+}
+.grid-3 div:nth-child(even){
+    text-align: right;
+}
+.grid-3 div:nth-child(5){
+    grid-column: 1/ 6;
+}
+.grid-3 div:nth-child(4){
+    grid-column: 1/ 7;
+}
+footer{
+    border-top: 1px solid #2E373A55;
+    min-height: 100vh;
+}
+footer .content{
+    width: min(1400px, 100vw);
+    margin: auto;
+    padding: 100px 20px;
 }
 
-/* Favorite Music ------------------------ */
-
-.spotify{
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    row-gap: 20px;
+@media screen and (max-width: 1023px){
+    header img{
+        height: 2em;
+    }
+    .banner .content h1{
+        font-size: 12em;
+    }
+    .banner .content .right{
+        transform: none;
+    }
+    .grid-2 div:nth-child(1){
+        grid-row: 2;
+    }
+    .grid-2 div:nth-child(3){
+        grid-row: 6;
+    }
+    .grid-2 div:nth-child(4){
+        grid-row: 5;
+    }
+    .grid-3{
+        font-size: 5em;
+        line-height: 1em;
+    }
 }
-
-.spotify-embed{
-    display: flex;
-    width: 400px;
-    height: auto;
-}
-
-#section3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-/* Campus ------------------------ */
-
-#section4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.campus{
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    row-gap: 20px;
-}
-
-
-/* Contact ------------------------ */
-
-#section5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-#section5 input, button, textarea {
-    border: 2px solid rgba(0, 0, 0, 0.6);
-    background-image:none;
-    background-color: #dadad3;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    padding: 5px;
-    
-    &:focus {
-        outline: none;
+@media screen and (max-width: 1023px){
+    header img{
+        height: unset;
+        width: 100%;
+    }
+    .banner .content h1{
+        font-size: 7em;
+    }
+    .banner .content{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner{
+        overflow: hidden;
+    }
+    .grid-1 h2:nth-child(3){
+        font-size: 3em;
+    }
+    .grid{
+        display: block;
+    }
+    .grid-3{
+        font-size: 4em;
+        display: block;
+        margin-bottom: 100px;
     }
 }
 
-textarea {
-    min-height: 50px;
-    resize:vertical;
+.autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
 }
-
-button {
-    cursor: pointer;
-    font-weight: 500;
+@keyframes autoRotateAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
 
-.feedback-card {
-    max-width: 980px;
-    margin: 0 auto;
-    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
 }
-
-.feedback-header {
-    text-align: center;
-    padding: 8px;
-    font-size: 14px;
-    font-weight: 700;
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
-
-.feedback-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+.autoBLur{
+    animation: autoBLurAnimation linear both;
+    animation-timeline: view();
 }
-
-.feedback-body__message {
-    margin-top: 10px;
-}
-
-.feedback-body button {
-    margin-top: 10px;
-    align-self: flex-end;
+@keyframes autoBLurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    45%, 55%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(40px);
+    }
 }
