@@ -1,81 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Portofolio Task Vanilla HTML + CSS"
+    />
     <title>Document</title>
-    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="mainpage.css" />
 </head>
+
 <body>
     <div class="bgimage">
-        <main >
+        <main>
             <header>
                 <h1>Portofolio Task</h1>
                 <h1>Vanilla HTML + CSS</h1>
             </header>
-    
+
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#about-us">About</a></li>
-                    <li><a href="#">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-    
+
             <section class="banner">
                 <div class="content">
                     <h1>GAME DEVELOPER</h1>
                     <h2>
-                        Backend Developer <br>
-                        Software Engineer <br>
+                        Backend Developer <br />
+                        Software Engineer <br />
                     </h2>
                 </div>
                 <div class="image">
-                    <img src="images/main-ojan.png" alt="guy">
+                    <img src="images/main-ojan.webp" alt="guy" />
                 </div>
             </section>
 
             <section class="techstack-slider">
-                <div class="slider" style="
-                    --width: 100px;
-                    --height: 50px;
-                    --quantity: 7;
-                ">
+                <div class="slider" style="--width: 100px; --height: 50px; --quantity: 7">
                     <div class="list">
-                        <div class="item" style="--position: 1"><img src="images/slider1_1.svg" alt=""></div>
-                        <div class="item" style="--position: 2"><img src="images/slider1_2.png" alt=""></div>
-                        <div class="item" style="--position: 3"><img src="images/slider1_3.png" alt=""></div>
-                        <div class="item" style="--position: 4"><img src="images/slider1_4.png" alt=""></div>
-                        <div class="item" style="--position: 5"><img src="images/slider1_5.png" alt=""></div>
-                        <div class="item java" style="--position: 6"><img src="images/slider1_6.png" alt=""></div>
-                        <div class="item" style="--position: 7"><img src="images/slider1_7.png" alt=""></div>
+                        <div class="item" style="--position: 1">
+                            <img src="images/slider1_1.svg" alt="" />
+                        </div>
+                        <div class="item" style="--position: 2">
+                            <img src="images/slider1_2.png" alt="" />
+                        </div>
+                        <div class="item" style="--position: 3">
+                            <img src="images/slider1_3.png" alt="" />
+                        </div>
+                        <div class="item" style="--position: 4">
+                            <img src="images/slider1_4.png" alt="" />
+                        </div>
+                        <div class="item" style="--position: 5">
+                            <img src="images/slider1_5.png" alt="" />
+                        </div>
+                        <div class="item java" style="--position: 6">
+                            <img src="images/slider1_6.png" alt="" />
+                        </div>
+                        <div class="item" style="--position: 7">
+                            <img src="images/slider1_7.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </section>
-    
+
             <section class="header-1" id="about-us">
                 <h2 class="autoShow">About Me</h2>
             </section>
-    
-            <section class="grid grid-2" style="background-color: #4e0000;">
+
+            <section class="grid grid-2">
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque excepturi quae numquam tenetur, inventore repudiandae consectetur, alias a rem dicta! Maiores commodi delectus in sed vitae repellat natus autem!</p>
+                    <p class="autoShow">
+                        Hii, nama ku Muhammad Fauzan Azhim. dan aku adalah mahasiswa ITB jurusan Sekolah Teknik Elektro
+                        dan Informaatika prodi Teknik Informatika. Saat ini aku berada pada tahun ke 3 ku dalam menempuh
+                        pendidikan di ITB. Saat ini di ITB aku menjabat sebagai asisten laboratorium IRK.
+                    </p>
+                </div>
+                <div>
                     <figure>
-                        <img src="images/pico.svg" alt="Pico CTF">
+                        <img src="images/logo_itb_1024.webp" alt="ITB Logo" style="width: 300px" />
+                    </figure>
+                </div>
+                <div>
+                    <p class="autoShow">
+                        Awal mula perjalanan ku di ITB adalah dengan aku mengeksplorasi Cyber Security. Dimana Cyber
+                        Security ini adalah salah satu bidang yang menarik bagi ku. Perlombaan pertama yang ku ikuti
+                        adalah Gemastik 2022, dimana kegagalan pertama ini adalah langkah pertama ku untuk belajar lebih
+                        banyak tentang Cyber Security.
+                    </p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="images/pico.svg" alt="CTF Logo" style="width: 300px" />
+                    </figure>
+                </div>
+                <div>
+                    <p class="autoShow">
+                        Setelah itu minat ku di Game Development ku muncul setelah aku memasuki Ganesha Interaktif
+                        Media. Dimana aku belajar banyak tentang Game Development dan aku mulai membuat game pertama ku.
+                    </p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="images/GIM.webp" alt="GIM Logo" style="width: 300px" />
                     </figure>
                 </div>
             </section>
-    
-            <section class="grid grid-3">
-    
+
+            <section class="header-1" id="projects">
+                <h2 class="autoShow">My Projects & Experience</h2>
+            </section>
+
+            <section class="projects">
+                <div class="masonry">
+                    <a href="https://github.com/fauzanazz/Password-Game">
+                        <div class="items"><img src="images/password-game.webp" alt=""></div>
+                    </a>
+                    <a href="https://github.com/fauzanazz/Influencerdetector">
+                        <div class="items"><img src="images/fakeTwitter.webp" alt=""></div>
+                    </a>
+                    <a href="https://itbfair.com/">
+                        <div class="items"><img src="images/ITBFAIR.webp" alt=""></div>
+                    </a>
+                    <a href="https://github.com/fauzanazz/dot-connect-game">
+                        <div class="items"><img src="images/dot-connect.webp" alt=""></div>
+                    </a>
+                    <a href="https://github.com/fauzanazz/Tubes2_OOP">
+                        <div class="items"><img src="images/farm-game.webp" alt=""></div>
+                    </a>
+                    <a href="https://github.com/fauzanazz/Tubes3_BesokMinggu">
+                        <div class="items"><img src="images/FingerprintScanner.webp" alt=""></div>
+                    </a>
+                    <a href="https://github.com/fauzanazz/Tucil3_13522153">
+                        <div class="items"><img src="images/WordLadder.webp" alt=""></div>
+                    </a>
+                </div>
+            </section>
+
+
+            <section class="footer">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h1>My Contact</h1>
+                        <ul class="links">
+                            <li><a href="mailto:fauzan.azhimmm@gmail.com">Mail</a></li>
+                            <li><a href="https://github.com/fauzanazz">Github</a></li>
+                            <li><a href="https://www.instagram.com/fauzannazz">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
-    <footer>
-        <div class="grid grid-5 content">
-            
-        </div>
-    </footer>
 </body>
+
 </html>
